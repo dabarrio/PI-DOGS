@@ -1,0 +1,13 @@
+.containerBG{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 150px;
+    background-image: url(../../img/bgNavBar.webp);
+    background-position: center;
+}
+.imgNav{
+    max-width: 150px;
+    max-height: 150px;
+}

@@ -1,0 +1,22 @@
+.containerSearch{
+    display: flex;
+    align-items: center;
+}
+.inputSearch{
+    padding: 5px 10px;
+    background-color: #d8aa81;
+    border: none;
+    border-bottom: 1px solid #000;
+    color: #000;
+    outline: none;
+    font-size: 16px;
+}
+.inputSearch::placeholder{
+    font-size: 15px;
+}
+.imgSearch{
+    height: 35px;
+}
+.imgSearch:hover{
+    cursor: pointer;
+}

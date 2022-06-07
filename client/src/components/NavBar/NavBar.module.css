@@ -1,0 +1,60 @@
+.containerNavBar{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.containerBG{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 150px;
+    background-image: url(../../img/bgNavBar.webp);
+    background-position: center;
+}
+.imgNav{
+    max-width: 150px;
+    max-height: 150px;
+}
+.containerFilter{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    background-color: #d8aa81;
+    width: 100%;
+    gap: 15px
+}
+.linkCreate{
+    /* background-color: #fec07a; */
+    background-color: #956a4d;
+    text-decoration: none;
+    padding: 10px 20px;
+    /* border: 1px solid #000; */
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.linkCreate:hover{
+    color: #000;
+    /* background-color: #956a4d; */
+    background-color: #fec07a;
+
+}
+.reloadNav{
+    height: 90px;
+}
+.reloadNav:hover{
+    cursor: pointer;
+}
+
+
+@media(max-width:768px){
+    .containerNavBar{
+        flex-direction: column;
+        justify-content: center;
+        height: 250px;
+    }
+}

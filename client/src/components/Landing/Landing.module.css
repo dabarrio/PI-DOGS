@@ -1,0 +1,81 @@
+.bg{
+    background: url(https://i.pinimg.com/originals/89/6d/c3/896dc3f0f25d9701645f4cd58c5e1308.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-position: 80%;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 3fr 2fr 1fr;
+}
+.container{
+    background-color: rgba(66, 66, 66, 0.3);
+    margin: 50px 0;
+    border-radius: 25px;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #f0ebe7;
+    user-select: none;
+}
+
+.titleLanding{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.textLanding{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+.linkLanding{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+}
+.h1Title{
+    font-weight: 700;
+    margin-bottom: -30px;
+}
+.spanTitle{
+    font-weight: 400;
+}
+.ulText{
+    font-weight: 400;
+    margin: 0;
+}
+.pLanding{
+    background-color: #281b2f;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: none;
+    color: #ceaeab;
+    font-weight: 700;
+    font-size: 16px;
+}
+.pLanding:hover{
+    cursor: pointer;
+    background-color: #ceaeab;
+    color: #281b2f;
+}
+@media(max-width:768px){
+    .bg{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .container{
+        width: 90%;
+    }
+}

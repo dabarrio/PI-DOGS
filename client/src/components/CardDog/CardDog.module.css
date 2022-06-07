@@ -1,0 +1,44 @@
+.containerDog{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-image: url(https://i.pinimg.com/236x/b9/e4/0c/b9e40c8692684e4088d5adff1a6b9627.jpg);
+    width: 850px;
+    height: 200px;
+    border-bottom: 0; 
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.dataDog{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 500px;
+    height: 150px;
+    background-color: rgba(66, 66, 66, 0.9);
+    color: #f0ebe7;
+    text-align: center;
+}
+.imageDog{
+    box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.50);
+    width:230px;
+    height:180px
+}
+.titleDog{
+    margin: 0;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+.weigthDog{
+    margin: 0;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    font-weight: 400;
+}

@@ -1,0 +1,57 @@
+.containerDogDetail{
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.7);
+    width: 100vh;
+    gap: 15px;
+    border-bottom: 0; 
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 100px;
+    background-image: url(../../img//back.png);
+    background-size: cover;  
+    margin: 0 auto;
+    align-items: center;
+    height: 700px;
+}
+.bgDogDetail{
+    background-color: rgba(216, 170, 129, .9);    
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80%;
+    max-height: 90%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;}
+
+.containerDogDetail h4,
+.containerDogDetail h3{
+    text-align: center;
+}
+.containerDogDetail h4{
+    margin: 0;
+}
+.imgDogDetail{
+    margin: 0 auto;
+    align-items: center;
+    height: 300px;
+    width: 250px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    margin-top: 50px;
+}
+.infoDogDetail{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+.displayFlexRow{
+    display: flex;
+    flex-direction: row;
+    gap: 100px
+}
+.loadingDogDetail{
+    width: 100vh;
+    height: 700px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
