@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
-import { createDog, getAllTemperaments } from "../../redux/actions";
+import { createDog, getAllTemperaments, killForm } from "../../redux/actions";
 import css from "./Form.module.css";
 import Header from '../NavBar/Header'
 import { Link } from "react-router-dom";
@@ -71,6 +71,10 @@ const Form = () => {
     console.log(newDog);
     dispatch(createDog(newDog));
   };
+
+  const cleanDog = e=>{
+    dispatch(killForm())
+  }
 
   const validate = (state) => {
     const errors = {};
@@ -143,11 +147,11 @@ const Form = () => {
       return newState;
     });
   };
-
+  console.log(dogCreate)
   return (
     <div>
      <Header/>
-      {dogCreate.length===0 ?
+      {!dogCreate.id ?
            <form className={css.form}>
            <div className={css.formFlexColumn}>
              <label htmlFor="name">Nombre</label>
@@ -305,8 +309,8 @@ const Form = () => {
            <h1>{`Tu perro ${dogCreate.name} ha sido creado`}</h1>
            <div className={css.linkContainer}>
              <img src={dogCreate.image} alt='Imagen de perro creado'/>
-             <Link className={css.linkCreated} to={`/${dogCreate.id}`}>Ver el perrito</Link>
-             <Link className={css.linkCreated} to='/home'>Volver al home</Link>
+             <Link className={css.linkCreated} to={`/${dogCreate.id}`} onClick={cleanDog}>Ver el perrito</Link>
+             <Link className={css.linkCreated} to='/home' onClick={cleanDog}>Volver al home</Link>
            </div>
         </div>}
     </div>

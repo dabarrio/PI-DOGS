@@ -14,6 +14,7 @@ export const CHANGE_PAGE = 'CHANGE_PAGE'
 export const RESET_DOG = 'RESET_DOG'
 export const KILL_RESET_DOG = 'KILL_RESET_DOG'
 export const DELETE_DOG = 'DELETE_DOG'
+export const KILL_FORM = 'KILL_FORM'
 
 export const ASCENDENTE = 'ASCENDENTE'
 export const DESCENDENTE = 'DESCENDENTE'

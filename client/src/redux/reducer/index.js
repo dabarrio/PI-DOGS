@@ -19,7 +19,8 @@ import {
   CREATE_DOG,
   RESET_DOG,
   KILL_RESET_DOG,
-  DELETE_DOG
+  DELETE_DOG,
+  KILL_FORM
 } from "../types_actions/types";
 
 const initialState = {
@@ -158,6 +159,11 @@ const reducer = (state = initialState, action) => {
         case DELETE_DOG:
           return{
             ...state
+          }
+        case KILL_FORM:
+          return{
+            ...state,
+            newDog :[]
           }
       default:
       return state;
