@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { CHANGE_PAGE, CREATE_DOG, FILTER_GET, FILTER_TEMPERAMENT, GET_ALL_DOGS, GET_ALL_TEMPERAMENTS, GET_DOG, GET_DOG_NAME, GET_KILL_DOG, NEXT_PAGE, PREV_PAGE, SORT_ABC, SORT_WEIGHT } from "../types_actions/types"
+import { CHANGE_PAGE, CREATE_DOG, FILTER_GET, FILTER_TEMPERAMENT, GET_ALL_DOGS, GET_ALL_TEMPERAMENTS, GET_DOG, GET_DOG_NAME, GET_KILL_DOG, NEXT_PAGE, PREV_PAGE, SORT_ABC, SORT_WEIGHT, RESET_DOG, KILL_RESET_DOG, ALL} from "../types_actions/types"
 
 //Traer todos los perros
 export const getAllDogs = ()=>{
@@ -118,5 +118,19 @@ export const createDog = (newDog)=>{
                 payload: dogNew.data
             })
         })
+    }
+}
+
+// Reset
+export const resetDog = ()=>{
+    return{
+        type : RESET_DOG,
+        payload: true
+    }
+}
+export const killResetDog = ()=>{
+    return{
+        type : KILL_RESET_DOG,
+        payload: false
     }
 }

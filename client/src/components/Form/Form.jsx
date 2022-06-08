@@ -70,7 +70,7 @@ const Form = () => {
     };
     console.log(newDog);
     dispatch(createDog(newDog));
-    return alert(`${input.name}`);
+    return alert(`${input.name} creado con éxito!`);
   };
 
   const validate = (state) => {
@@ -291,10 +291,11 @@ const Form = () => {
            </div>
          </form>:
          <div className={css.form}>
-           <h1>Tu perro ha sido creado con exito!</h1>
-           <div>
-             <Link to={`/${dogCreate.id}`}>Ver el perrito</Link>
-             <Link to='/home'>Volver al home</Link>
+           <h1>{`Tu perro ${dogCreate.name} ha sido creado`}</h1>
+           <div className={css.linkContainer}>
+             <img src={dogCreate.image} alt='Imagen de perro creado'/>
+             <Link className={css.linkCreated} to={`/${dogCreate.id}`}>Ver el perrito</Link>
+             <Link className={css.linkCreated} to='/home'>Volver al home</Link>
            </div>
         </div>}
     </div>

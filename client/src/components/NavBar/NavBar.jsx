@@ -7,21 +7,28 @@ import FilterGet from '../FilterGET/FilterGET'
 import FilterTemperament from '../FilterTemperament/FilterTemperaments'
 import reload from '../../img/reload.webp'
 import Header from "./Header"
+import { useDispatch } from "react-redux"
+import { resetDog } from "../../redux/actions"
 
 const NavBar = () => {
+
+  const dispatch = useDispatch()
+
+  const resetClick=e=>{
+    e.preventDefault()
+    dispatch(resetDog())
+  }
+
   return (
       //Head
     <div className={css.containerNavBar}>
-      {/* <div className={css.containerBG}>
-        <Link to='/'><img className={css.imgNav} src={homeNav} alt='Imagen NavBar'/></Link>
-      </div> */}
       <Header/>
       <div className={css.containerFilter}>
         <OrderABC/>
         <OrderWeight/>
         <FilterGet/>
         <FilterTemperament/>
-        <img className={css.reloadNav} src={reload} alt='Recargar perros'/>
+        {/* <img className={css.reloadNav} src={reload} alt='Recargar perros' onClick={resetClick}/> */}
         <Link className={css.linkCreate} to='/Create-Dog'>Crear un perrito</Link>
         <Search />
       </div>

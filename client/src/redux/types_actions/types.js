@@ -11,6 +11,8 @@ export const GET_DOG_NAME = 'GET_DOG_NAME'
 export const NEXT_PAGE = 'NEXT_PAGE'
 export const PREV_PAGE = 'PREV_PAGE'
 export const CHANGE_PAGE = 'CHANGE_PAGE'
+export const RESET_DOG = 'RESET_DOG'
+export const KILL_RESET_DOG = 'KILL_RESET_DOG'
 
 export const ASCENDENTE = 'ASCENDENTE'
 export const DESCENDENTE = 'DESCENDENTE'

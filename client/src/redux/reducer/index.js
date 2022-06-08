@@ -16,7 +16,9 @@ import {
   NEXT_PAGE,
   PREV_PAGE,
   CHANGE_PAGE,
-  CREATE_DOG
+  CREATE_DOG,
+  RESET_DOG,
+  KILL_RESET_DOG
 } from "../types_actions/types";
 
 const initialState = {
@@ -26,7 +28,8 @@ const initialState = {
   dogID: [],
   page: 1,
   newDog : [],
-  findDB: []
+  findDB: [],
+  reset: false
 };
 
 const reducer = (state = initialState, action) => {
@@ -140,6 +143,17 @@ const reducer = (state = initialState, action) => {
           ...state,
           newDog : action.payload
         }
+        case RESET_DOG:
+          return{
+            ...state,
+            dogsFilter:state.dogs,
+            reset:action.payload
+          }
+        case KILL_RESET_DOG:
+          return{
+            ...state,
+            reset:action.payload
+          }
       default:
       return state;
   }

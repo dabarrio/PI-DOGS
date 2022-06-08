@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { changePage, filterGET } from "../../redux/actions";
-import { FILTER_GET, API, DB } from "../../redux/types_actions/types";
+import { ALL, API, DB } from "../../redux/types_actions/types";
 import css from './FilterGet.module.css'
 
 const FilterGET = () => {
@@ -14,7 +14,7 @@ const FilterGET = () => {
   return (
     <div>
     <select onChange={onChangeFilter} className={css.filterGet}>
-      <option value={FILTER_GET}>Selecciona un filtro</option>
+      <option value={ALL}>Selecciona un filtro</option>
       <option value={API}>API</option>
       <option value={DB}>DB</option>
     </select>

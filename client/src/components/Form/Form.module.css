@@ -90,3 +90,17 @@ align-items: center;}
     background-color: #00D26A;
     color: #E5F2EB;
 }
+.linkContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+.linkCreated{
+    text-decoration: none;
+    text-align: center;
+    background-color:#00D26A;
+    color: #E5F2EB;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
