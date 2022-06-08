@@ -194,7 +194,7 @@ const Form = () => {
              </div>
            </div>
            <div className={css.formFlexColumn}>
-             <label htmlFor="min_weight">Peso</label>
+             <label>Peso</label>
              {/* Minimo */}
              <div className={css.formFlexRow}>
              <div className={css.minMax}>

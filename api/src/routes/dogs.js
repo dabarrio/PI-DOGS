@@ -48,7 +48,7 @@ router.get('', async (req, res,next)=>{
               height_min:dog.min_height,
               height_max:dog.max_height,
               weight_min: dog.min_weight,
-              weight_max: dog.min_weight,
+              weight_max: dog.max_weight,
               life_span: dog.life_span,
               image: dog.image,
               temperament : temperaments.join(', ') || 'No tiene temperamentos'
