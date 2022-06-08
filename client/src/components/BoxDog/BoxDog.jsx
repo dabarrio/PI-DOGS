@@ -24,7 +24,6 @@ const BoxDog = () => {
 
     dogs = dogs.slice(start, end)
 
-    console.log(dogs)
   return (
     <div>
         {dogs.length?

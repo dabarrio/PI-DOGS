@@ -84,25 +84,37 @@ const Form = () => {
     /// min_height
     if (!state.min_height) {
       errors.min_height = "Por favor, complete este campo";
-    } else if (!/(^\d{1,3})$/.test(state.min_height)) {
+    }else if(state.min_height>state.max_height){
+      errors.min_height = `'${state.min_height}' no puede ser mayoror a ${state.max_height}`
+    } 
+    else if (!/(^\d{1,3})$/.test(state.min_height)) {
       errors.min_height = `'${state.min_height}' no cumple con los requisitos`;
     }
     ///max_height
     if (!state.max_height) {
       errors.max_height = "Por favor, complete este campo";
-    } else if (!/(^\d{1,3})$/.test(state.max_height)) {
+    } else if(state.min_height>=state.max_height){
+      errors.max_height = `'${state.max_height}' no puede ser menor a ${state.min_height}`
+    }
+    else if (!/(^\d{1,3})$/.test(state.max_height)) {
       errors.max_height = `'${state.max_height}' no cumple con los requisitos`;
     }
     ///min_weight
     if (!state.min_weight) {
       errors.min_weight = "Por favor, complete este campo";
-    } else if (!/(^\d{1,3})$/.test(state.min_weight)) {
+    } else if(state.min_weight>state.max_weight){
+      errors.min_weight = `'${state.max_weight}' no puede ser mayor a ${state.min_weight}`
+    } 
+    else if (!/(^\d{1,3})$/.test(state.min_weight)) {
       errors.min_weight = `'${state.min_weight}' no cumple con los requisitos`;
     }
     ///max_weight
     if (!state.max_weight) {
       errors.max_weight = "Por favor, complete este campo";
-    } else if (!/(^\d{1,3})$/.test(state.max_weight)) {
+    } else if(state.min_weight>=state.max_weight){
+      errors.max_weight = `'${state.max_weight}' no puede ser menor a ${state.min_weight}`
+    }
+    else if (!/(^\d{1,3})$/.test(state.max_weight)) {
       errors.max_weight = `'${state.max_weight}' no cumple con los requisitos`;
     }
     ///life_span
@@ -158,7 +170,7 @@ const Form = () => {
              <div className={css.minMax}>
              <div>
              <input
-               className={error.name ? css.inputFormDanger : css.inputForm }
+               className={error.min_height ? css.inputFormDanger : css.inputForm }
                type="num"
                name="min_height"
                value={input.min_height}

@@ -136,6 +136,24 @@ router.get('/:id', async(req,res,next)=>{
     }
 })
 
+router.delete('/delete/:id', async(req,res,next)=>{
+  const {id}=req.params
+  try {
+    const dog = await Dog.findOne({where:{id:id}})
+
+    if(dog){
+      await Dog.destroy({where:{id:id}})
+    res.status(201).send('Perrito borrado')
+    }
+    if(!dog){
+      res.status(404).send('Ese perrito no existe')
+    }
+
+  } catch (error) {
+    next(error)
+  }
+})
+
 router.post("/dog", async (req, res, next) => {
     try {
       const { name, min_height, max_height, min_weight, max_weight,life_span,image,temperament} = req.body;
@@ -156,5 +174,7 @@ router.post("/dog", async (req, res, next) => {
       next(error);
     }
   });
+
+
 
 module.exports = router;

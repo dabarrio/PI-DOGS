@@ -18,7 +18,8 @@ import {
   CHANGE_PAGE,
   CREATE_DOG,
   RESET_DOG,
-  KILL_RESET_DOG
+  KILL_RESET_DOG,
+  DELETE_DOG
 } from "../types_actions/types";
 
 const initialState = {
@@ -153,6 +154,10 @@ const reducer = (state = initialState, action) => {
           return{
             ...state,
             reset:action.payload
+          }
+        case DELETE_DOG:
+          return{
+            ...state
           }
       default:
       return state;

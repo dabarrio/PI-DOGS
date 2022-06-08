@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { CHANGE_PAGE, CREATE_DOG, FILTER_GET, FILTER_TEMPERAMENT, GET_ALL_DOGS, GET_ALL_TEMPERAMENTS, GET_DOG, GET_DOG_NAME, GET_KILL_DOG, NEXT_PAGE, PREV_PAGE, SORT_ABC, SORT_WEIGHT, RESET_DOG, KILL_RESET_DOG, ALL} from "../types_actions/types"
+import { CHANGE_PAGE, CREATE_DOG, FILTER_GET, FILTER_TEMPERAMENT, GET_ALL_DOGS, GET_ALL_TEMPERAMENTS, GET_DOG, GET_DOG_NAME, GET_KILL_DOG, NEXT_PAGE, PREV_PAGE, SORT_ABC, SORT_WEIGHT, RESET_DOG, KILL_RESET_DOG, ALL, DELETE_DOG} from "../types_actions/types"
 
 //Traer todos los perros
 export const getAllDogs = ()=>{
@@ -30,7 +30,6 @@ export const getDogID = (id)=>{
     return (dispatch)=>{
         axios(`/app/dogs/${id}`)
         .then(dog=>{
-            console.log(dog.data)
             return dispatch({
                 type: GET_DOG,
                 payload:dog.data
@@ -41,6 +40,19 @@ export const getDogID = (id)=>{
 export const killDogID = ()=>{
     return {
         type: GET_KILL_DOG
+    }
+}
+
+// Delete dog
+export const dogDelete = (id)=>{
+    return (dispatch)=>{
+        axios.delete(`/app/dogs/delete/${id}`)
+        .then(msg=>{
+            return dispatch({
+                type:DELETE_DOG,
+                payload: msg
+            })
+        })
     }
 }
 
@@ -134,3 +146,4 @@ export const killResetDog = ()=>{
         payload: false
     }
 }
+
