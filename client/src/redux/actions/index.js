@@ -122,14 +122,27 @@ export const changePage = (page)=>{
 
 //Crear perro
 export const createDog = (newDog)=>{
-    return dispatch=>{
-        axios.post('/app/dogs/dog', newDog)
-        .then(dogNew=>{
-            return dispatch({
-                type: CREATE_DOG,
-                payload: dogNew.data
-            })
+    return async dispatch=>{
+        // axios.post('/app/dogs/dog', newDog)
+        // .then(dogNew=>{
+        //     return dispatch({
+        //         type: CREATE_DOG,
+        //         payload: dogNew.data
+        //     })
+        // })
+        // .catch(error){
+        //     console.log(error)
+        // }
+        try {
+        const post = await axios.post('/app/dogs/dog', newDog)
+        alert('Perrito creado con exito!')
+        return dispatch({
+            type: CREATE_DOG,
+            payload: post.data
         })
+        } catch (error) {
+            alert('No se pudo crear tu perro')
+        }
     }
 }
 

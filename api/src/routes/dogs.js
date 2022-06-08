@@ -156,7 +156,7 @@ router.delete('/delete/:id', async(req,res,next)=>{
 
 router.post("/dog", async (req, res, next) => {
     try {
-      const { name, min_height, max_height, min_weight, max_weight,life_span,image,temperament} = req.body;
+      const { name, min_height, max_height, min_weight, max_weight,life_span,image,temperament } = req.body;
   
       const newDog = await Dog.create({
         name,

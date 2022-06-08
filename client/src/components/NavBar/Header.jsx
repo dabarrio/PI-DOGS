@@ -5,7 +5,7 @@ import homeNav from '../../img/HomePNG.webp'
 const Header = () => {
   return (
     <div className={css.containerBG}>
-    <Link to='/'><img className={css.imgNav} src={homeNav} alt='Imagen NavBar'/></Link>
+    <Link to='/home'><img className={css.imgNav} src={homeNav} alt='Imagen NavBar'/></Link>
     </div>
   )
 }

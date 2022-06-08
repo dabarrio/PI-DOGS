@@ -70,7 +70,6 @@ const Form = () => {
     };
     console.log(newDog);
     dispatch(createDog(newDog));
-    return alert(`${input.name} creado con éxito!`);
   };
 
   const validate = (state) => {

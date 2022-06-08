@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import { useDispatch } from 'react-redux'
-import { getDogName } from '../../redux/actions'
+import { changePage, getDogName } from '../../redux/actions'
 import css from './Search.module.css'
 import lupa from '../../img/search.webp'
 
@@ -17,6 +17,7 @@ const Search = () => {
     const onSubmit = (e)=>{
         e.preventDefault()
         dispatch(getDogName(search))
+        dispatch(changePage(1))
         setSearch('')
     }
 
